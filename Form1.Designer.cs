@@ -41,7 +41,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.zigzag = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.platform_final = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.Gold = new System.Windows.Forms.PictureBox();
@@ -82,8 +82,8 @@
             this.scoreLabel = new System.Windows.Forms.Label();
             this.finish = new System.Windows.Forms.PictureBox();
             this.stateLabel = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.Crist = new System.Windows.Forms.PictureBox();
+            this.Bouh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.platfomr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -95,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zigzag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platform_final)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gold)).BeginInit();
@@ -133,8 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Crist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bouh)).BeginInit();
             this.SuspendLayout();
             // 
             // platfomr
@@ -176,6 +176,7 @@
             this.Platform.TabIndex = 3;
             this.Platform.TabStop = false;
             this.Platform.Tag = "platform";
+            this.Platform.Click += new System.EventHandler(this.Platform_Click);
             // 
             // pictureBox5
             // 
@@ -247,15 +248,15 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Tag = "platform";
             // 
-            // pictureBox12
+            // platform_final
             // 
-            this.pictureBox12.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox12.Location = new System.Drawing.Point(-3, 224);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(320, 28);
-            this.pictureBox12.TabIndex = 12;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Tag = "platform";
+            this.platform_final.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.platform_final.Location = new System.Drawing.Point(-3, 224);
+            this.platform_final.Name = "platform_final";
+            this.platform_final.Size = new System.Drawing.Size(320, 28);
+            this.platform_final.TabIndex = 12;
+            this.platform_final.TabStop = false;
+            this.platform_final.Tag = "platform";
             // 
             // pictureBox13
             // 
@@ -656,36 +657,36 @@
             this.stateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.stateLabel.Click += new System.EventHandler(this.stateLabel_Click);
             // 
-            // pictureBox11
+            // Crist
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(207, 174);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(38, 53);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 53;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Tag = "cristian";
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            this.Crist.Image = ((System.Drawing.Image)(resources.GetObject("Crist.Image")));
+            this.Crist.Location = new System.Drawing.Point(207, 174);
+            this.Crist.Name = "Crist";
+            this.Crist.Size = new System.Drawing.Size(38, 53);
+            this.Crist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Crist.TabIndex = 53;
+            this.Crist.TabStop = false;
+            this.Crist.Tag = "cristian";
+            this.Crist.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
-            // pictureBox15
+            // Bouh
             // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(338, 507);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(38, 53);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 54;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Tag = "cristian";
+            this.Bouh.Image = ((System.Drawing.Image)(resources.GetObject("Bouh.Image")));
+            this.Bouh.Location = new System.Drawing.Point(338, 507);
+            this.Bouh.Name = "Bouh";
+            this.Bouh.Size = new System.Drawing.Size(38, 53);
+            this.Bouh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Bouh.TabIndex = 54;
+            this.Bouh.TabStop = false;
+            this.Bouh.Tag = "cristian";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 799);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.Bouh);
+            this.Controls.Add(this.Crist);
             this.Controls.Add(this.finish);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.player);
@@ -724,7 +725,7 @@
             this.Controls.Add(this.Gold);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.platform_final);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.zigzag);
             this.Controls.Add(this.pictureBox10);
@@ -754,7 +755,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zigzag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platform_final)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gold)).EndInit();
@@ -792,8 +793,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Crist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bouh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -812,7 +813,7 @@
         private PictureBox pictureBox10;
         private PictureBox zigzag;
         private PictureBox pictureBox9;
-        private PictureBox pictureBox12;
+        private PictureBox platform_final;
         private PictureBox pictureBox13;
         private PictureBox pictureBox14;
         private PictureBox Gold;
@@ -853,7 +854,7 @@
         private Label scoreLabel;
         private PictureBox finish;
         private Label stateLabel;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox15;
+        private PictureBox Crist;
+        private PictureBox Bouh;
     }
 }
