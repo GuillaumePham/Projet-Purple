@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.platfomr = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -81,6 +82,8 @@
             this.scoreLabel = new System.Windows.Forms.Label();
             this.finish = new System.Windows.Forms.PictureBox();
             this.stateLabel = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.platfomr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -130,6 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // platfomr
@@ -605,9 +610,9 @@
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImage = global::Plateformeur.Properties.Resources.IMG_20220719_1235412;
+            this.player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("player.BackgroundImage")));
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.player.Image = global::Plateformeur.Properties.Resources.IMG_20220719_1235413;
+            this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
             this.player.Location = new System.Drawing.Point(0, 680);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(59, 43);
@@ -649,12 +654,38 @@
             this.stateLabel.Size = new System.Drawing.Size(1031, 47);
             this.stateLabel.TabIndex = 52;
             this.stateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.stateLabel.Click += new System.EventHandler(this.stateLabel_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(207, 174);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(38, 53);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 53;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Tag = "cristian";
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(338, 507);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(38, 53);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 54;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Tag = "cristian";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 799);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.finish);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.player);
@@ -707,7 +738,9 @@
             this.Controls.Add(this.platfomr);
             this.Controls.Add(this.stateLabel);
             this.Name = "Form1";
-            this.Text = "Platformeur";
+            this.Tag = "cristian";
+            this.Text = "dd";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.platfomr)).EndInit();
@@ -759,6 +792,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -818,5 +853,7 @@
         private Label scoreLabel;
         private PictureBox finish;
         private Label stateLabel;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox15;
     }
 }

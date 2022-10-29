@@ -8,14 +8,14 @@ namespace Plateformeur
 {
     public partial class Form1 : Form
     {
-        bool goLeft, goRight, jump, goDown, endGame ;
+        bool goLeft, goRight, jump ;
         bool canJump;
         int jumpSpeed { get; set; }
         int score { get; set; } = 0;
 
         List<PictureBox> platforms = new List<PictureBox>();
         List<PictureBox> coins = new List<PictureBox>();
-        
+        List<PictureBox> ennemie = new List<PictureBox>();
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +34,9 @@ namespace Plateformeur
                         case "player":
                             player = pictureControl;
                             break;
+                        case "cristian":
+                            ennemie.Add(pictureControl);
+                            break ;
                     }
                 }
                 else if (control is Label labelControl)
@@ -80,6 +83,16 @@ namespace Plateformeur
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
 
@@ -90,11 +103,21 @@ namespace Plateformeur
                 stateLabel.Text = "Vous êtes mort !!!";
                 RestartGame();
             }
+            foreach(PictureBox ennemi in ennemie.ToList())
+            {
+                if (player.Bounds.IntersectsWith(ennemi.Bounds))
+                {
+                    
+                    RestartGame();
+                    break;
+                }
+            }
+            
 
             foreach (var coin in coins)
             {
                 if (coin.Visible && player.Bounds.IntersectsWith(coin.Bounds))
-                {
+                { 
                     score++;
                     coin.Visible = false;
                     scoreLabel.Text = score.ToString();
@@ -109,7 +132,7 @@ namespace Plateformeur
                     stateLabel.Text = "Récupérez toutes les pièces d'abord.";
                     stateLabel.ForeColor = Color.Red;
                 }
-                else
+                 else
                 {
                     stateLabel.Text = $"Vous avez gagné!! Votre score est de {score}";
                     stateLabel.ForeColor = Color.Green;
@@ -131,10 +154,17 @@ namespace Plateformeur
             {
                 jump = true;
             }
-            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
-            {
-                goDown = true;
-            }
+            
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -151,17 +181,15 @@ namespace Plateformeur
             {
                 jump = false;
             }
-            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
-            {
-                goDown = false;
-            }
+           
 
         }
 
         private void RestartGame()
         {
+            stateLabel.ForeColor = Color.Black;
             stateLabel.Text = "Récuperer toutes les pièces pour vous enfuir";
-
+            scoreLabel.Text = "0";
             score = 0;
 
             player.Left = 0;
